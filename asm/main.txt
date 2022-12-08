@@ -1,68 +1,2426 @@
-.section .text.exper_some::main,"ax",@progbits
+.section .text.exper_option::main,"ax",@progbits
 	.p2align	4, 0x90
-	.type	exper_some::main,@function
-exper_some::main:
+	.type	exper_option::main,@function
+exper_option::main:
 
-		// /home/wink/prgs/rust/myrepos/exper-some/src/main.rs : 3
-		fn main () {
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 9
+		fn main() {
 	.cfi_startproc
-	sub rsp, 72
-	.cfi_def_cfa_offset 80
+	.cfi_personality 155, DW.ref.rust_eh_personality
+	.cfi_lsda 27, .Lexception0
+	push rbp
+	.cfi_def_cfa_offset 16
+	push r15
+	.cfi_def_cfa_offset 24
+	push r14
+	.cfi_def_cfa_offset 32
+	push r13
+	.cfi_def_cfa_offset 40
+	push r12
+	.cfi_def_cfa_offset 48
+	push rbx
+	.cfi_def_cfa_offset 56
+	sub rsp, 344
+	.cfi_def_cfa_offset 400
+	.cfi_offset rbx, -56
+	.cfi_offset r12, -48
+	.cfi_offset r13, -40
+	.cfi_offset r14, -32
+	.cfi_offset r15, -24
+	.cfi_offset rbp, -16
 
-		// /home/wink/prgs/rust/myrepos/exper-some/src/main.rs : 4
-		let r = add(3, 3);
-	mov edi, 3
-	mov esi, 3
-	call qword ptr [rip + exper_some::add@GOTPCREL]
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 18
+		let size_ptr = 8;
+	mov qword ptr [rsp + 336], 8
 
-	mov qword ptr [rsp], rax
-
-		// /home/wink/prgs/rust/myrepos/exper-some/src/main.rs : 5
-		assert_eq!(r, 6);
-	cmp rax, 6
-
-	jne .LBB7_2
-
-	mov rax, rsp
-
-		// /home/wink/prgs/rust/myrepos/exper-some/src/main.rs : 6
-		println!("{r}");
-	mov qword ptr [rsp + 8], rax
-	mov rax, qword ptr [rip + core::fmt::num::imp::<impl core::fmt::Display for usize>::fmt@GOTPCREL]
-	mov qword ptr [rsp + 16], rax
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 33
+		println!("size_of::<u8>={}", size_of::<u8>());
+	lea rax, [rip + .L__unnamed_11]
+	mov qword ptr [rsp + 56], rax
+	mov r15, qword ptr [rip + core::fmt::num::imp::<impl core::fmt::Display for usize>::fmt@GOTPCREL]
+	mov qword ptr [rsp + 64], r15
 
 		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/core/src/fmt/mod.rs : 398
 		Arguments { pieces, fmt: None, args }
-	lea rax, [rip + .L__unnamed_5]
+	lea rax, [rip + .L__unnamed_12]
 
-	mov qword ptr [rsp + 24], rax
-	mov qword ptr [rsp + 32], 2
-	mov qword ptr [rsp + 40], 0
-	lea rax, [rsp + 8]
+	mov qword ptr [rsp], rax
+	mov qword ptr [rsp + 8], 2
+	mov qword ptr [rsp + 16], 0
+	lea r13, [rsp + 56]
+	mov qword ptr [rsp + 32], r13
+	mov qword ptr [rsp + 40], 1
 
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 33
+		println!("size_of::<u8>={}", size_of::<u8>());
+	mov rbx, qword ptr [rip + std::io::stdio::_print@GOTPCREL]
+	mov rdi, rsp
+	call rbx
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 35
+		println!("size_of::<Option<u8>>={}", size_of::<Option<u8>>());
+	lea rbp, [rip + .L__unnamed_13]
+	mov qword ptr [rsp + 56], rbp
+	mov qword ptr [rsp + 64], r15
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/core/src/fmt/mod.rs : 398
+		Arguments { pieces, fmt: None, args }
+	lea rax, [rip + .L__unnamed_14]
+
+	mov qword ptr [rsp], rax
+	mov qword ptr [rsp + 8], 2
+	mov qword ptr [rsp + 16], 0
+	mov qword ptr [rsp + 32], r13
+	mov qword ptr [rsp + 40], 1
+	mov rdi, rsp
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 35
+		println!("size_of::<Option<u8>>={}", size_of::<Option<u8>>());
+	call rbx
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 37
+		println!("size_of::<u16>={}", size_of::<u16>());
+	mov qword ptr [rsp + 56], rbp
+	mov qword ptr [rsp + 64], r15
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/core/src/fmt/mod.rs : 398
+		Arguments { pieces, fmt: None, args }
+	lea rax, [rip + .L__unnamed_15]
+
+	mov qword ptr [rsp], rax
+	mov qword ptr [rsp + 8], 2
+	mov qword ptr [rsp + 16], 0
+	mov qword ptr [rsp + 32], r13
+	mov qword ptr [rsp + 40], 1
+	mov rdi, rsp
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 37
+		println!("size_of::<u16>={}", size_of::<u16>());
+	call rbx
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 39
+		println!("size_of::<Option<u16>>={}", size_of::<Option<u16>>());
+	lea rbp, [rip + .L__unnamed_16]
+	mov qword ptr [rsp + 56], rbp
+	mov qword ptr [rsp + 64], r15
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/core/src/fmt/mod.rs : 398
+		Arguments { pieces, fmt: None, args }
+	lea rax, [rip + .L__unnamed_17]
+
+	mov qword ptr [rsp], rax
+	mov qword ptr [rsp + 8], 2
+	mov qword ptr [rsp + 16], 0
+	mov qword ptr [rsp + 32], r13
+	mov qword ptr [rsp + 40], 1
+	mov rdi, rsp
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 39
+		println!("size_of::<Option<u16>>={}", size_of::<Option<u16>>());
+	call rbx
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 41
+		println!("size_of::<u32>={}", size_of::<u32>());
+	mov qword ptr [rsp + 56], rbp
+	mov qword ptr [rsp + 64], r15
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/core/src/fmt/mod.rs : 398
+		Arguments { pieces, fmt: None, args }
+	lea rax, [rip + .L__unnamed_18]
+
+	mov qword ptr [rsp], rax
+	mov qword ptr [rsp + 8], 2
+	mov qword ptr [rsp + 16], 0
+	mov qword ptr [rsp + 32], r13
+	mov qword ptr [rsp + 40], 1
+	mov rdi, rsp
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 41
+		println!("size_of::<u32>={}", size_of::<u32>());
+	call rbx
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 43
+		println!("size_of::<Option<u32>>={}", size_of::<Option<u32>>());
+	lea r12, [rip + .L__unnamed_9]
+	mov qword ptr [rsp + 56], r12
+	mov qword ptr [rsp + 64], r15
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/core/src/fmt/mod.rs : 398
+		Arguments { pieces, fmt: None, args }
+	lea rax, [rip + .L__unnamed_19]
+
+	mov qword ptr [rsp], rax
+	mov qword ptr [rsp + 8], 2
+	mov qword ptr [rsp + 16], 0
+	mov qword ptr [rsp + 32], r13
+	mov qword ptr [rsp + 40], 1
+	mov rdi, rsp
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 43
+		println!("size_of::<Option<u32>>={}", size_of::<Option<u32>>());
+	call rbx
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 45
+		println!("size_of::<u64>={}", size_of::<u64>());
+	mov qword ptr [rsp + 56], r12
+	mov qword ptr [rsp + 64], r15
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/core/src/fmt/mod.rs : 398
+		Arguments { pieces, fmt: None, args }
+	lea rax, [rip + .L__unnamed_20]
+
+	mov qword ptr [rsp], rax
+	mov qword ptr [rsp + 8], 2
+	mov qword ptr [rsp + 16], 0
+	mov qword ptr [rsp + 32], r13
+	mov qword ptr [rsp + 40], 1
+	mov rdi, rsp
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 45
+		println!("size_of::<u64>={}", size_of::<u64>());
+	call rbx
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 47
+		println!("size_of::<Option<u64>>={}", size_of::<Option<u64>>());
+	lea rbp, [rip + .L__unnamed_21]
+	mov qword ptr [rsp + 56], rbp
+	mov qword ptr [rsp + 64], r15
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/core/src/fmt/mod.rs : 398
+		Arguments { pieces, fmt: None, args }
+	lea rax, [rip + .L__unnamed_22]
+
+	mov qword ptr [rsp], rax
+	mov qword ptr [rsp + 8], 2
+	mov qword ptr [rsp + 16], 0
+	mov qword ptr [rsp + 32], r13
+	mov qword ptr [rsp + 40], 1
+	mov rdi, rsp
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 47
+		println!("size_of::<Option<u64>>={}", size_of::<Option<u64>>());
+	call rbx
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 49
+		println!("size_of::<u128>={}", size_of::<u128>());
+	mov qword ptr [rsp + 56], rbp
+	mov qword ptr [rsp + 64], r15
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/core/src/fmt/mod.rs : 398
+		Arguments { pieces, fmt: None, args }
+	lea rax, [rip + .L__unnamed_23]
+
+	mov qword ptr [rsp], rax
+	mov qword ptr [rsp + 8], 2
+	mov qword ptr [rsp + 16], 0
+	mov qword ptr [rsp + 32], r13
+	mov qword ptr [rsp + 40], 1
+	mov rdi, rsp
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 49
+		println!("size_of::<u128>={}", size_of::<u128>());
+	call rbx
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 51
+		println!("size_of::<Option<u128>>={}", size_of::<Option<u128>>());
+	lea rax, [rip + .L__unnamed_24]
 	mov qword ptr [rsp + 56], rax
-	mov qword ptr [rsp + 64], 1
-	lea rdi, [rsp + 24]
+	mov qword ptr [rsp + 64], r15
 
-		// /home/wink/prgs/rust/myrepos/exper-some/src/main.rs : 6
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/core/src/fmt/mod.rs : 398
+		Arguments { pieces, fmt: None, args }
+	lea rax, [rip + .L__unnamed_25]
+
+	mov qword ptr [rsp], rax
+	mov qword ptr [rsp + 8], 2
+	mov qword ptr [rsp + 16], 0
+	mov qword ptr [rsp + 32], r13
+	mov qword ptr [rsp + 40], 1
+	mov rdi, rsp
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 51
+		println!("size_of::<Option<u128>>={}", size_of::<Option<u128>>());
+	call rbx
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 53
+		println!("size_of::<usize>={}", size_of::<usize>());
+	mov qword ptr [rsp + 56], r12
+	mov qword ptr [rsp + 64], r15
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/core/src/fmt/mod.rs : 398
+		Arguments { pieces, fmt: None, args }
+	lea rax, [rip + .L__unnamed_26]
+
+	mov qword ptr [rsp], rax
+	mov qword ptr [rsp + 8], 2
+	mov qword ptr [rsp + 16], 0
+	mov qword ptr [rsp + 32], r13
+	mov qword ptr [rsp + 40], 1
+	mov rdi, rsp
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 53
+		println!("size_of::<usize>={}", size_of::<usize>());
+	call rbx
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 55
+		println!("size_of::<Option<usize>>={}", size_of::<Option<usize>>());
+	mov qword ptr [rsp + 56], rbp
+	mov qword ptr [rsp + 64], r15
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/core/src/fmt/mod.rs : 398
+		Arguments { pieces, fmt: None, args }
+	lea rax, [rip + .L__unnamed_27]
+
+	mov qword ptr [rsp], rax
+	mov qword ptr [rsp + 8], 2
+	mov qword ptr [rsp + 16], 0
+	mov qword ptr [rsp + 32], r13
+	mov qword ptr [rsp + 40], 1
+	mov rdi, rsp
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 55
+		println!("size_of::<Option<usize>>={}", size_of::<Option<usize>>());
+	call rbx
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 60
+		discriminant(&var_option_u8_none)
+	mov qword ptr [rsp + 88], 0
+	lea rbp, [rsp + 88]
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 58
+		println!(
+	mov qword ptr [rsp + 56], rbp
+	lea r14, [rip + <core::mem::Discriminant<T> as core::fmt::Debug>::fmt]
+	mov qword ptr [rsp + 64], r14
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/core/src/fmt/mod.rs : 398
+		Arguments { pieces, fmt: None, args }
+	lea rax, [rip + .L__unnamed_28]
+
+	mov qword ptr [rsp], rax
+	mov qword ptr [rsp + 8], 2
+	mov qword ptr [rsp + 16], 0
+	mov qword ptr [rsp + 32], r13
+	mov qword ptr [rsp + 40], 1
+	mov rdi, rsp
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 58
+		println!(
+	call rbx
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 65
+		discriminant(&var_option_u8_some)
+	mov qword ptr [rsp + 88], 1
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 63
+		println!(
+	mov qword ptr [rsp + 56], rbp
+	mov qword ptr [rsp + 64], r14
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/core/src/fmt/mod.rs : 398
+		Arguments { pieces, fmt: None, args }
+	lea rax, [rip + .L__unnamed_29]
+
+	mov qword ptr [rsp], rax
+	mov qword ptr [rsp + 8], 2
+	mov qword ptr [rsp + 16], 0
+	mov qword ptr [rsp + 32], r13
+	mov qword ptr [rsp + 40], 1
+	mov rdi, rsp
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 63
+		println!(
+	call rbx
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 68
+		println!("size_of::<Option<&u8>>={}", size_of::<Option<&u8>>());
+	mov qword ptr [rsp + 56], r12
+	mov qword ptr [rsp + 64], r15
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/core/src/fmt/mod.rs : 398
+		Arguments { pieces, fmt: None, args }
+	lea rax, [rip + .L__unnamed_30]
+
+	mov qword ptr [rsp], rax
+	mov qword ptr [rsp + 8], 2
+	mov qword ptr [rsp + 16], 0
+	mov qword ptr [rsp + 32], r13
+	mov qword ptr [rsp + 40], 1
+	mov rdi, rsp
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 68
+		println!("size_of::<Option<&u8>>={}", size_of::<Option<&u8>>());
+	call rbx
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 69
+		assert_eq!(size_of::<Option<&u8>>(), size_ptr);
+	cmp qword ptr [rsp + 336], 8
+	jne .LBB19_90
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 75
+		discriminant(&var_option_ref_u8_none)
+	mov qword ptr [rsp + 88], 0
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 73
+		println!(
+	mov qword ptr [rsp + 56], rbp
+	mov qword ptr [rsp + 64], r14
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/core/src/fmt/mod.rs : 398
+		Arguments { pieces, fmt: None, args }
+	lea rax, [rip + .L__unnamed_31]
+
+	mov qword ptr [rsp], rax
+	mov qword ptr [rsp + 8], 2
+	mov qword ptr [rsp + 16], 0
+	mov qword ptr [rsp + 32], r13
+	mov qword ptr [rsp + 40], 1
+	mov rdi, rsp
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 73
+		println!(
+	call rbx
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 80
+		discriminant(&var_option_ref_var_u8_some)
+	mov qword ptr [rsp + 88], 1
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 78
+		println!(
+	mov qword ptr [rsp + 56], rbp
+	mov qword ptr [rsp + 64], r14
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/core/src/fmt/mod.rs : 398
+		Arguments { pieces, fmt: None, args }
+	lea rax, [rip + .L__unnamed_32]
+
+	mov qword ptr [rsp], rax
+	mov qword ptr [rsp + 8], 2
+	mov qword ptr [rsp + 16], 0
+	mov qword ptr [rsp + 32], r13
+	mov qword ptr [rsp + 40], 1
+	mov rdi, rsp
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 78
+		println!(
+	call rbx
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 85
+		println!("size_of::<UnitStruct>={}", size_of::<UnitStruct>());
+	lea rax, [rip + .L__unnamed_33]
+	mov qword ptr [rsp + 56], rax
+	mov qword ptr [rsp + 64], r15
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/core/src/fmt/mod.rs : 398
+		Arguments { pieces, fmt: None, args }
+	lea rax, [rip + .L__unnamed_34]
+
+	mov qword ptr [rsp], rax
+	mov qword ptr [rsp + 8], 2
+	mov qword ptr [rsp + 16], 0
+	mov qword ptr [rsp + 32], r13
+	mov qword ptr [rsp + 40], 1
+	mov rdi, rsp
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 85
+		println!("size_of::<UnitStruct>={}", size_of::<UnitStruct>());
+	call rbx
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 87
+		println!("size_of::<&UnitStruct>={}", size_of::<&UnitStruct>());
+	mov qword ptr [rsp + 56], r12
+	mov qword ptr [rsp + 64], r15
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/core/src/fmt/mod.rs : 398
+		Arguments { pieces, fmt: None, args }
+	lea rax, [rip + .L__unnamed_35]
+
+	mov qword ptr [rsp], rax
+	mov qword ptr [rsp + 8], 2
+	mov qword ptr [rsp + 16], 0
+	mov qword ptr [rsp + 32], r13
+	mov qword ptr [rsp + 40], 1
+	mov rdi, rsp
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 87
+		println!("size_of::<&UnitStruct>={}", size_of::<&UnitStruct>());
+	call rbx
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 89
+		println!(
+	mov qword ptr [rsp + 56], r12
+	mov qword ptr [rsp + 64], r15
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/core/src/fmt/mod.rs : 398
+		Arguments { pieces, fmt: None, args }
+	lea rax, [rip + .L__unnamed_36]
+
+	mov qword ptr [rsp], rax
+	mov qword ptr [rsp + 8], 2
+	mov qword ptr [rsp + 16], 0
+	mov qword ptr [rsp + 32], r13
+	mov qword ptr [rsp + 40], 1
+	mov rdi, rsp
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 89
+		println!(
+	call rbx
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 98
+		println!("size_of::<StructU8>={}", size_of::<StructU8>());
+	lea rax, [rip + .L__unnamed_11]
+	mov qword ptr [rsp + 56], rax
+	mov qword ptr [rsp + 64], r15
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/core/src/fmt/mod.rs : 398
+		Arguments { pieces, fmt: None, args }
+	lea rax, [rip + .L__unnamed_37]
+
+	mov qword ptr [rsp], rax
+	mov qword ptr [rsp + 8], 2
+	mov qword ptr [rsp + 16], 0
+	mov qword ptr [rsp + 32], r13
+	mov qword ptr [rsp + 40], 1
+	mov rdi, rsp
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 98
+		println!("size_of::<StructU8>={}", size_of::<StructU8>());
+	call rbx
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 100
+		println!("size_of::<&StructU8>={}", size_of::<&StructU8>());
+	mov qword ptr [rsp + 56], r12
+	mov qword ptr [rsp + 64], r15
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/core/src/fmt/mod.rs : 398
+		Arguments { pieces, fmt: None, args }
+	lea rax, [rip + .L__unnamed_38]
+
+	mov qword ptr [rsp], rax
+	mov qword ptr [rsp + 8], 2
+	mov qword ptr [rsp + 16], 0
+	mov qword ptr [rsp + 32], r13
+	mov qword ptr [rsp + 40], 1
+	mov rdi, rsp
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 100
+		println!("size_of::<&StructU8>={}", size_of::<&StructU8>());
+	call rbx
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 102
+		println!(
+	mov qword ptr [rsp + 56], r12
+	mov qword ptr [rsp + 64], r15
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/core/src/fmt/mod.rs : 398
+		Arguments { pieces, fmt: None, args }
+	lea rax, [rip + .L__unnamed_39]
+
+	mov qword ptr [rsp], rax
+	mov qword ptr [rsp + 8], 2
+	mov qword ptr [rsp + 16], 0
+	mov qword ptr [rsp + 32], r13
+	mov qword ptr [rsp + 40], 1
+	mov rdi, rsp
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 102
+		println!(
+	call rbx
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 107
+		let r = check_option_val(Some(3));
+	mov edi, 1
+	mov esi, 3
+	call qword ptr [rip + exper_option::check_option_val@GOTPCREL]
+	mov qword ptr [rsp + 152], rax
+	lea rax, [rsp + 152]
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 108
+		println!("{r}");
+	mov qword ptr [rsp + 56], rax
+	mov r15, qword ptr [rip + core::fmt::num::imp::<impl core::fmt::Display for isize>::fmt@GOTPCREL]
+	mov qword ptr [rsp + 64], r15
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/core/src/fmt/mod.rs : 398
+		Arguments { pieces, fmt: None, args }
+	lea r12, [rip + .L__unnamed_40]
+
+	mov qword ptr [rsp], r12
+	mov qword ptr [rsp + 8], 2
+	mov qword ptr [rsp + 16], 0
+	mov qword ptr [rsp + 32], r13
+	mov qword ptr [rsp + 40], 1
+	mov rdi, rsp
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 108
+		println!("{r}");
+	call rbx
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 109
+		assert_eq!(r, 3);
+	cmp qword ptr [rsp + 152], 3
+
+	jne .LBB19_91
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 110
+		let r = check_option_val(Some(255));
+	mov edi, 1
+	mov esi, 255
+	call qword ptr [rip + exper_option::check_option_val@GOTPCREL]
+	mov qword ptr [rsp + 160], rax
+	lea rax, [rsp + 160]
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 111
+		println!("{r}");
+	mov qword ptr [rsp + 56], rax
+	mov qword ptr [rsp + 64], r15
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/core/src/fmt/mod.rs : 398
+		Arguments { pieces, fmt: None, args }
+	mov qword ptr [rsp], r12
+	mov qword ptr [rsp + 8], 2
+	mov qword ptr [rsp + 16], 0
+	mov qword ptr [rsp + 32], r13
+	mov qword ptr [rsp + 40], 1
+	mov rdi, rsp
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 111
 		println!("{r}");
 	call qword ptr [rip + std::io::stdio::_print@GOTPCREL]
 
-		// /home/wink/prgs/rust/myrepos/exper-some/src/main.rs : 7
-		}
-	add rsp, 72
-	.cfi_def_cfa_offset 8
-	ret
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 112
+		assert_eq!(r, -1);
+	cmp qword ptr [rsp + 160], -1
 
-.LBB7_2:
-	.cfi_def_cfa_offset 80
-		// /home/wink/prgs/rust/myrepos/exper-some/src/main.rs : 5
-		assert_eq!(r, 6);
-	mov qword ptr [rsp + 24], 0
+	jne .LBB19_92
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 113
+		let r = check_option_val(None);
+	xor edi, edi
+	call qword ptr [rip + exper_option::check_option_val@GOTPCREL]
+	mov qword ptr [rsp + 168], rax
+	lea rax, [rsp + 168]
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 114
+		println!("{r}");
+	mov qword ptr [rsp + 56], rax
+	mov qword ptr [rsp + 64], r15
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/core/src/fmt/mod.rs : 398
+		Arguments { pieces, fmt: None, args }
+	mov qword ptr [rsp], r12
+	mov qword ptr [rsp + 8], 2
+	mov qword ptr [rsp + 16], 0
+	mov qword ptr [rsp + 32], r13
+	mov qword ptr [rsp + 40], 1
+	mov rdi, rsp
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 114
+		println!("{r}");
+	call qword ptr [rip + std::io::stdio::_print@GOTPCREL]
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 115
+		assert_eq!(r, -2);
+	cmp qword ptr [rsp + 168], -2
+
+	jne .LBB19_93
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 117
+		let r = check_val(3);
+	mov edi, 3
+	call qword ptr [rip + exper_option::check_val@GOTPCREL]
+	mov qword ptr [rsp + 176], rax
+	lea rax, [rsp + 176]
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 118
+		println!("{r}");
+	mov qword ptr [rsp + 56], rax
+	mov qword ptr [rsp + 64], r15
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/core/src/fmt/mod.rs : 398
+		Arguments { pieces, fmt: None, args }
+	mov qword ptr [rsp], r12
+	mov qword ptr [rsp + 8], 2
+	mov qword ptr [rsp + 16], 0
+	mov qword ptr [rsp + 32], r13
+	mov qword ptr [rsp + 40], 1
+	mov rdi, rsp
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 118
+		println!("{r}");
+	call qword ptr [rip + std::io::stdio::_print@GOTPCREL]
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 119
+		assert_eq!(r, 3);
+	cmp qword ptr [rsp + 176], 3
+
+	jne .LBB19_94
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 120
+		let r = check_val(255);
+	mov edi, 255
+	call qword ptr [rip + exper_option::check_val@GOTPCREL]
+	mov qword ptr [rsp + 184], rax
+	lea rax, [rsp + 184]
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 121
+		println!("{r}");
+	mov qword ptr [rsp + 56], rax
+	mov qword ptr [rsp + 64], r15
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/core/src/fmt/mod.rs : 398
+		Arguments { pieces, fmt: None, args }
+	mov qword ptr [rsp], r12
+	mov qword ptr [rsp + 8], 2
+	mov qword ptr [rsp + 16], 0
+	mov qword ptr [rsp + 32], r13
+	mov qword ptr [rsp + 40], 1
+	mov rdi, rsp
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 121
+		println!("{r}");
+	call qword ptr [rip + std::io::stdio::_print@GOTPCREL]
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 122
+		assert_eq!(r, -1);
+	cmp qword ptr [rsp + 184], -1
+
+	jne .LBB19_95
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 124
+		let mut val = 3u8;
+	mov byte ptr [rsp + 54], 3
+
+	lea rdi, [rsp + 54]
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 125
+		let r = check_option_ptr_to_val(Some(&val));
+	call qword ptr [rip + exper_option::check_option_ptr_to_val@GOTPCREL]
+	mov qword ptr [rsp + 192], rax
+	lea rax, [rsp + 192]
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 126
+		println!("{r}");
+	mov qword ptr [rsp + 56], rax
+	mov qword ptr [rsp + 64], r15
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/core/src/fmt/mod.rs : 398
+		Arguments { pieces, fmt: None, args }
+	mov qword ptr [rsp], r12
+	mov qword ptr [rsp + 8], 2
+	mov qword ptr [rsp + 16], 0
+	mov qword ptr [rsp + 32], r13
+	mov qword ptr [rsp + 40], 1
+	mov rdi, rsp
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 126
+		println!("{r}");
+	call qword ptr [rip + std::io::stdio::_print@GOTPCREL]
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 127
+		assert_eq!(r, 3);
+	cmp qword ptr [rsp + 192], 3
+
+	jne .LBB19_96
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 128
+		val = 255;
+	mov byte ptr [rsp + 54], -1
+
+	lea rdi, [rsp + 54]
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 129
+		let r = check_option_ptr_to_val(Some(&val));
+	call qword ptr [rip + exper_option::check_option_ptr_to_val@GOTPCREL]
+	mov qword ptr [rsp + 200], rax
+	lea rax, [rsp + 200]
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 130
+		println!("{r}");
+	mov qword ptr [rsp + 56], rax
+	mov qword ptr [rsp + 64], r15
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/core/src/fmt/mod.rs : 398
+		Arguments { pieces, fmt: None, args }
+	mov qword ptr [rsp], r12
+	mov qword ptr [rsp + 8], 2
+	mov qword ptr [rsp + 16], 0
+	mov qword ptr [rsp + 32], r13
+	mov qword ptr [rsp + 40], 1
+	mov rdi, rsp
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 130
+		println!("{r}");
+	call qword ptr [rip + std::io::stdio::_print@GOTPCREL]
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 131
+		assert_eq!(r, -1);
+	cmp qword ptr [rsp + 200], -1
+
+	jne .LBB19_97
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 132
+		let r = check_option_ptr_to_val(None);
+	xor edi, edi
+	call qword ptr [rip + exper_option::check_option_ptr_to_val@GOTPCREL]
+	mov qword ptr [rsp + 208], rax
+	lea rax, [rsp + 208]
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 133
+		println!("{r}");
+	mov qword ptr [rsp + 56], rax
+	mov qword ptr [rsp + 64], r15
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/core/src/fmt/mod.rs : 398
+		Arguments { pieces, fmt: None, args }
+	mov qword ptr [rsp], r12
+	mov qword ptr [rsp + 8], 2
+	mov qword ptr [rsp + 16], 0
+	mov qword ptr [rsp + 32], r13
+	mov qword ptr [rsp + 40], 1
+	mov rdi, rsp
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 133
+		println!("{r}");
+	call qword ptr [rip + std::io::stdio::_print@GOTPCREL]
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 134
+		assert_eq!(r, -2);
+	cmp qword ptr [rsp + 208], -2
+
+	jne .LBB19_98
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 136
+		let mut val = 3u8;
+	mov byte ptr [rsp + 55], 3
+
+	lea rdi, [rsp + 55]
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 137
+		let r = check_ptr_to_val(&val);
+	call qword ptr [rip + exper_option::check_ptr_to_val@GOTPCREL]
+	mov qword ptr [rsp + 216], rax
+	lea rax, [rsp + 216]
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 138
+		println!("{r}");
+	mov qword ptr [rsp + 56], rax
+	mov qword ptr [rsp + 64], r15
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/core/src/fmt/mod.rs : 398
+		Arguments { pieces, fmt: None, args }
+	mov qword ptr [rsp], r12
+	mov qword ptr [rsp + 8], 2
+	mov qword ptr [rsp + 16], 0
+	mov qword ptr [rsp + 32], r13
+	mov qword ptr [rsp + 40], 1
+	mov rdi, rsp
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 138
+		println!("{r}");
+	call qword ptr [rip + std::io::stdio::_print@GOTPCREL]
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 139
+		assert_eq!(r, 3);
+	cmp qword ptr [rsp + 216], 3
+
+	jne .LBB19_99
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 140
+		val = 255;
+	mov byte ptr [rsp + 55], -1
+
+	lea rdi, [rsp + 55]
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 141
+		let r = check_ptr_to_val(&val);
+	call qword ptr [rip + exper_option::check_ptr_to_val@GOTPCREL]
+	mov qword ptr [rsp + 224], rax
+	lea rax, [rsp + 224]
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 142
+		println!("{r}");
+	mov qword ptr [rsp + 56], rax
+	mov qword ptr [rsp + 64], r15
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/core/src/fmt/mod.rs : 398
+		Arguments { pieces, fmt: None, args }
+	mov qword ptr [rsp], r12
+	mov qword ptr [rsp + 8], 2
+	mov qword ptr [rsp + 16], 0
+	mov qword ptr [rsp + 32], r13
+	mov qword ptr [rsp + 40], 1
+	mov rdi, rsp
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 142
+		println!("{r}");
+	call qword ptr [rip + std::io::stdio::_print@GOTPCREL]
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 143
+		assert_eq!(r, -1);
+	cmp qword ptr [rsp + 224], -1
+
+	jne .LBB19_100
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/alloc.rs : 95
+		unsafe { __rust_alloc(layout.size(), layout.align()) }
+	mov edi, 1
+	mov esi, 1
+	call qword ptr [rip + __rust_alloc@GOTPCREL]
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/alloc.rs : 326
+		match Global.allocate(layout) {
+	test rax, rax
+	je .LBB19_81
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/boxed.rs : 220
+		Box::new(x)
+	mov byte ptr [rax], 3
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 146
+		let r = check_option_box_of_val(Some(val));
+	mov rdi, rax
+	call qword ptr [rip + exper_option::check_option_box_of_val@GOTPCREL]
+
+	mov qword ptr [rsp + 232], rax
+	lea rax, [rsp + 232]
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 147
+		println!("{r}");
+	mov qword ptr [rsp + 56], rax
+	mov qword ptr [rsp + 64], r15
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/core/src/fmt/mod.rs : 398
+		Arguments { pieces, fmt: None, args }
+	mov qword ptr [rsp], r12
+	mov qword ptr [rsp + 8], 2
+	mov qword ptr [rsp + 16], 0
+	mov qword ptr [rsp + 32], r13
+	mov qword ptr [rsp + 40], 1
+	mov rdi, rsp
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 147
+		println!("{r}");
+	call qword ptr [rip + std::io::stdio::_print@GOTPCREL]
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 148
+		assert_eq!(r, 3);
+	cmp qword ptr [rsp + 232], 3
+
+	jne .LBB19_101
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/alloc.rs : 95
+		unsafe { __rust_alloc(layout.size(), layout.align()) }
+	mov edi, 1
+	mov esi, 1
+	call qword ptr [rip + __rust_alloc@GOTPCREL]
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/alloc.rs : 326
+		match Global.allocate(layout) {
+	test rax, rax
+	je .LBB19_81
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/boxed.rs : 220
+		Box::new(x)
+	mov byte ptr [rax], -1
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 150
+		let r = check_option_box_of_val(Some(val));
+	mov rdi, rax
+	call qword ptr [rip + exper_option::check_option_box_of_val@GOTPCREL]
+
+	mov qword ptr [rsp + 240], rax
+	lea rax, [rsp + 240]
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 151
+		println!("{r}");
+	mov qword ptr [rsp + 56], rax
+	mov qword ptr [rsp + 64], r15
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/core/src/fmt/mod.rs : 398
+		Arguments { pieces, fmt: None, args }
+	mov qword ptr [rsp], r12
+	mov qword ptr [rsp + 8], 2
+	mov qword ptr [rsp + 16], 0
+	mov qword ptr [rsp + 32], r13
+	mov qword ptr [rsp + 40], 1
+	mov rdi, rsp
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 151
+		println!("{r}");
+	call qword ptr [rip + std::io::stdio::_print@GOTPCREL]
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 152
+		assert_eq!(r, -1);
+	cmp qword ptr [rsp + 240], -1
+
+	jne .LBB19_102
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 153
+		let r = check_option_box_of_val(None);
+	xor edi, edi
+	call qword ptr [rip + exper_option::check_option_box_of_val@GOTPCREL]
+	mov qword ptr [rsp + 248], rax
+	lea rax, [rsp + 248]
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 154
+		println!("{r}");
+	mov qword ptr [rsp + 56], rax
+	mov qword ptr [rsp + 64], r15
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/core/src/fmt/mod.rs : 398
+		Arguments { pieces, fmt: None, args }
+	mov qword ptr [rsp], r12
+	mov qword ptr [rsp + 8], 2
+	mov qword ptr [rsp + 16], 0
+	mov qword ptr [rsp + 32], r13
+	mov qword ptr [rsp + 40], 1
+	mov rdi, rsp
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 154
+		println!("{r}");
+	call qword ptr [rip + std::io::stdio::_print@GOTPCREL]
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 155
+		assert_eq!(r, -2);
+	cmp qword ptr [rsp + 248], -2
+
+	jne .LBB19_103
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/alloc.rs : 95
+		unsafe { __rust_alloc(layout.size(), layout.align()) }
+	mov edi, 1
+	mov esi, 1
+	call qword ptr [rip + __rust_alloc@GOTPCREL]
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/alloc.rs : 326
+		match Global.allocate(layout) {
+	test rax, rax
+	je .LBB19_81
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/boxed.rs : 220
+		Box::new(x)
+	mov byte ptr [rax], 3
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 158
+		let r = check_box_of_val(val);
+	mov rdi, rax
+	call qword ptr [rip + exper_option::check_box_of_val@GOTPCREL]
+
+	mov qword ptr [rsp + 256], rax
+	lea rax, [rsp + 256]
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 159
+		println!("{r}");
+	mov qword ptr [rsp + 56], rax
+	mov qword ptr [rsp + 64], r15
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/core/src/fmt/mod.rs : 398
+		Arguments { pieces, fmt: None, args }
+	mov qword ptr [rsp], r12
+	mov qword ptr [rsp + 8], 2
+	mov qword ptr [rsp + 16], 0
+	mov qword ptr [rsp + 32], r13
+	mov qword ptr [rsp + 40], 1
+	mov rdi, rsp
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 159
+		println!("{r}");
+	call qword ptr [rip + std::io::stdio::_print@GOTPCREL]
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 160
+		assert_eq!(r, 3);
+	cmp qword ptr [rsp + 256], 3
+
+	jne .LBB19_104
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/alloc.rs : 95
+		unsafe { __rust_alloc(layout.size(), layout.align()) }
+	mov edi, 1
+	mov esi, 1
+	call qword ptr [rip + __rust_alloc@GOTPCREL]
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/alloc.rs : 326
+		match Global.allocate(layout) {
+	test rax, rax
+	je .LBB19_81
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/boxed.rs : 220
+		Box::new(x)
+	mov byte ptr [rax], -1
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 162
+		let r = check_box_of_val(val);
+	mov rdi, rax
+	call qword ptr [rip + exper_option::check_box_of_val@GOTPCREL]
+
+	mov qword ptr [rsp + 264], rax
+	lea rax, [rsp + 264]
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 163
+		println!("{r}");
+	mov qword ptr [rsp + 56], rax
+	mov qword ptr [rsp + 64], r15
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/core/src/fmt/mod.rs : 398
+		Arguments { pieces, fmt: None, args }
+	mov qword ptr [rsp], r12
+	mov qword ptr [rsp + 8], 2
+	mov qword ptr [rsp + 16], 0
+	mov qword ptr [rsp + 32], r13
+	mov qword ptr [rsp + 40], 1
+	mov rdi, rsp
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 163
+		println!("{r}");
+	call qword ptr [rip + std::io::stdio::_print@GOTPCREL]
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 164
+		assert_eq!(r, -1);
+	cmp qword ptr [rsp + 264], -1
+
+	jne .LBB19_105
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/alloc.rs : 95
+		unsafe { __rust_alloc(layout.size(), layout.align()) }
+	mov edi, 1
+	mov esi, 1
+	call qword ptr [rip + __rust_alloc@GOTPCREL]
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/alloc.rs : 326
+		match Global.allocate(layout) {
+	test rax, rax
+	je .LBB19_81
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/boxed.rs : 220
+		Box::new(x)
+	mov byte ptr [rax], 3
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 167
+		let (r, obv) = check_option_box_of_val_ret_val_option_box(Some(val));
+	mov rdi, rax
+	call qword ptr [rip + exper_option::check_option_box_of_val_ret_val_option_box@GOTPCREL]
+
+	mov qword ptr [rsp + 272], rax
+	mov qword ptr [rsp + 96], rdx
+	lea rax, [rsp + 272]
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 168
+		println!("{r} {obv:?}");
+	mov qword ptr [rsp + 56], rax
+	mov qword ptr [rsp + 64], r15
+	lea rax, [rsp + 96]
+	mov qword ptr [rsp + 72], rax
+	lea rbx, [rip + <core::option::Option<T> as core::fmt::Debug>::fmt]
+	mov qword ptr [rsp + 80], rbx
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/core/src/fmt/mod.rs : 398
+		Arguments { pieces, fmt: None, args }
+	lea r12, [rip + .L__unnamed_41]
+
+	mov qword ptr [rsp], r12
+	mov qword ptr [rsp + 8], 3
+	mov qword ptr [rsp + 16], 0
+	mov qword ptr [rsp + 32], r13
+	mov qword ptr [rsp + 40], 2
 
 	mov rdi, rsp
-	lea rsi, [rsp + 24]
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 168
+		println!("{r} {obv:?}");
+	call qword ptr [rip + std::io::stdio::_print@GOTPCREL]
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 169
+		assert_eq!(r, 3);
+	cmp qword ptr [rsp + 272], 3
+
+	jne .LBB19_107
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/alloc.rs : 95
+		unsafe { __rust_alloc(layout.size(), layout.align()) }
+	mov edi, 1
+	mov esi, 1
+	call qword ptr [rip + __rust_alloc@GOTPCREL]
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/alloc.rs : 326
+		match Global.allocate(layout) {
+	test rax, rax
+	je .LBB19_83
+
+	mov rdi, rax
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/boxed.rs : 220
+		Box::new(x)
+	mov byte ptr [rax], 3
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 170
+		assert_eq!(obv, Some(Box::new(3)));
+	mov qword ptr [rsp + 56], rax
+
+	mov rax, qword ptr [rsp + 96]
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/core/src/option.rs : 515
+		#[derive(Copy, PartialEq, PartialOrd, Eq, Ord, Debug, Hash)]
+	test rax, rax
+
+	je .LBB19_82
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/core/src/cmp.rs : 1346
+		fn eq(&self, other: &$t) -> bool { (*self) == (*other) }
+	cmp byte ptr [rax], 3
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 170
+		assert_eq!(obv, Some(Box::new(3)));
+	jne .LBB19_82
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/alloc.rs : 113
+		unsafe { __rust_dealloc(ptr, layout.size(), layout.align()) }
+	mov esi, 1
+	mov edx, 1
+	call qword ptr [rip + __rust_dealloc@GOTPCREL]
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/alloc.rs : 95
+		unsafe { __rust_alloc(layout.size(), layout.align()) }
+	mov edi, 1
+	mov esi, 1
+	call qword ptr [rip + __rust_alloc@GOTPCREL]
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/alloc.rs : 326
+		match Global.allocate(layout) {
+	test rax, rax
+	je .LBB19_83
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/boxed.rs : 220
+		Box::new(x)
+	mov byte ptr [rax], -1
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 172
+		let (r, obv) = check_option_box_of_val_ret_val_option_box(Some(val));
+	mov rdi, rax
+	call qword ptr [rip + exper_option::check_option_box_of_val_ret_val_option_box@GOTPCREL]
+
+	mov qword ptr [rsp + 280], rax
+
+	mov qword ptr [rsp + 104], rdx
+	lea rax, [rsp + 280]
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 173
+		println!("{r} {obv:?}");
+	mov qword ptr [rsp + 56], rax
+	mov qword ptr [rsp + 64], r15
+	lea rax, [rsp + 104]
+	mov qword ptr [rsp + 72], rax
+	mov qword ptr [rsp + 80], rbx
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/core/src/fmt/mod.rs : 398
+		Arguments { pieces, fmt: None, args }
+	mov qword ptr [rsp], r12
+	mov qword ptr [rsp + 8], 3
+	mov qword ptr [rsp + 16], 0
+	mov qword ptr [rsp + 32], r13
+	mov qword ptr [rsp + 40], 2
+
+	mov rdi, rsp
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 173
+		println!("{r} {obv:?}");
+	call qword ptr [rip + std::io::stdio::_print@GOTPCREL]
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 174
+		assert_eq!(r, -1);
+	cmp qword ptr [rsp + 280], -1
+
+	jne .LBB19_108
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/alloc.rs : 95
+		unsafe { __rust_alloc(layout.size(), layout.align()) }
+	mov edi, 1
+	mov esi, 1
+	call qword ptr [rip + __rust_alloc@GOTPCREL]
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/alloc.rs : 326
+		match Global.allocate(layout) {
+	test rax, rax
+	je .LBB19_109
+
+	mov rdi, rax
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/boxed.rs : 220
+		Box::new(x)
+	mov byte ptr [rax], -1
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 175
+		assert_eq!(obv, Some(Box::new(255)));
+	mov qword ptr [rsp + 56], rax
+
+	mov rax, qword ptr [rsp + 104]
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/core/src/option.rs : 515
+		#[derive(Copy, PartialEq, PartialOrd, Eq, Ord, Debug, Hash)]
+	test rax, rax
+
+	je .LBB19_84
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/core/src/cmp.rs : 1346
+		fn eq(&self, other: &$t) -> bool { (*self) == (*other) }
+	cmp byte ptr [rax], -1
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 175
+		assert_eq!(obv, Some(Box::new(255)));
+	jne .LBB19_84
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/alloc.rs : 113
+		unsafe { __rust_dealloc(ptr, layout.size(), layout.align()) }
+	mov esi, 1
+	mov edx, 1
+	call qword ptr [rip + __rust_dealloc@GOTPCREL]
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 176
+		let (r, obv) = check_option_box_of_val_ret_val_option_box(None);
+	xor edi, edi
+	call qword ptr [rip + exper_option::check_option_box_of_val_ret_val_option_box@GOTPCREL]
+
+	mov qword ptr [rsp + 288], rax
+
+	mov qword ptr [rsp + 112], rdx
+	lea rax, [rsp + 288]
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 177
+		println!("{r} {obv:?}");
+	mov qword ptr [rsp + 56], rax
+	mov qword ptr [rsp + 64], r15
+	lea rax, [rsp + 112]
+	mov qword ptr [rsp + 72], rax
+	mov qword ptr [rsp + 80], rbx
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/core/src/fmt/mod.rs : 398
+		Arguments { pieces, fmt: None, args }
+	mov qword ptr [rsp], r12
+	mov qword ptr [rsp + 8], 3
+	mov qword ptr [rsp + 16], 0
+	mov qword ptr [rsp + 32], r13
+	mov qword ptr [rsp + 40], 2
+
+	mov rdi, rsp
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 177
+		println!("{r} {obv:?}");
+	call qword ptr [rip + std::io::stdio::_print@GOTPCREL]
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 178
+		assert_eq!(r, -2);
+	cmp qword ptr [rsp + 288], -2
+
+	jne .LBB19_110
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/core/src/option.rs : 515
+		#[derive(Copy, PartialEq, PartialOrd, Eq, Ord, Debug, Hash)]
+	cmp qword ptr [rsp + 112], 0
+
+	jne .LBB19_111
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/alloc.rs : 95
+		unsafe { __rust_alloc(layout.size(), layout.align()) }
+	mov edi, 1
+	mov esi, 1
+	call qword ptr [rip + __rust_alloc@GOTPCREL]
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/alloc.rs : 326
+		match Global.allocate(layout) {
+	test rax, rax
+	je .LBB19_112
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/boxed.rs : 220
+		Box::new(x)
+	mov byte ptr [rax], 3
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 182
+		let (r, obv) = check_box_of_val_ret_val_option_box(val);
+	mov rdi, rax
+	call qword ptr [rip + exper_option::check_box_of_val_ret_val_option_box@GOTPCREL]
+
+	mov qword ptr [rsp + 296], rax
+
+	mov qword ptr [rsp + 120], rdx
+	lea rax, [rsp + 296]
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 183
+		println!("{r} {obv:?}");
+	mov qword ptr [rsp + 56], rax
+	mov qword ptr [rsp + 64], r15
+	lea rax, [rsp + 120]
+	mov qword ptr [rsp + 72], rax
+	mov qword ptr [rsp + 80], rbx
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/core/src/fmt/mod.rs : 398
+		Arguments { pieces, fmt: None, args }
+	mov qword ptr [rsp], r12
+	mov qword ptr [rsp + 8], 3
+	mov qword ptr [rsp + 16], 0
+	mov qword ptr [rsp + 32], r13
+	mov qword ptr [rsp + 40], 2
+
+	mov rdi, rsp
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 183
+		println!("{r} {obv:?}");
+	call qword ptr [rip + std::io::stdio::_print@GOTPCREL]
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 184
+		assert_eq!(r, 3);
+	cmp qword ptr [rsp + 296], 3
+
+	jne .LBB19_113
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/alloc.rs : 95
+		unsafe { __rust_alloc(layout.size(), layout.align()) }
+	mov edi, 1
+	mov esi, 1
+	call qword ptr [rip + __rust_alloc@GOTPCREL]
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/alloc.rs : 326
+		match Global.allocate(layout) {
+	test rax, rax
+	je .LBB19_86
+
+	mov rdi, rax
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/boxed.rs : 220
+		Box::new(x)
+	mov byte ptr [rax], 3
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 185
+		assert_eq!(obv, Some(Box::new(3)));
+	mov qword ptr [rsp + 56], rax
+
+	mov rax, qword ptr [rsp + 120]
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/core/src/option.rs : 515
+		#[derive(Copy, PartialEq, PartialOrd, Eq, Ord, Debug, Hash)]
+	test rax, rax
+
+	je .LBB19_85
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/core/src/cmp.rs : 1346
+		fn eq(&self, other: &$t) -> bool { (*self) == (*other) }
+	cmp byte ptr [rax], 3
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 185
+		assert_eq!(obv, Some(Box::new(3)));
+	jne .LBB19_85
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/alloc.rs : 113
+		unsafe { __rust_dealloc(ptr, layout.size(), layout.align()) }
+	mov esi, 1
+	mov edx, 1
+	call qword ptr [rip + __rust_dealloc@GOTPCREL]
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/alloc.rs : 95
+		unsafe { __rust_alloc(layout.size(), layout.align()) }
+	mov edi, 1
+	mov esi, 1
+	call qword ptr [rip + __rust_alloc@GOTPCREL]
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/alloc.rs : 326
+		match Global.allocate(layout) {
+	test rax, rax
+	je .LBB19_86
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/boxed.rs : 220
+		Box::new(x)
+	mov byte ptr [rax], -1
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 187
+		let (r, obv) = check_box_of_val_ret_val_option_box(val);
+	mov rdi, rax
+	call qword ptr [rip + exper_option::check_box_of_val_ret_val_option_box@GOTPCREL]
+
+	mov qword ptr [rsp + 304], rax
+
+	mov qword ptr [rsp + 128], rdx
+	lea rax, [rsp + 304]
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 188
+		println!("{r} {obv:?}");
+	mov qword ptr [rsp + 56], rax
+	mov qword ptr [rsp + 64], r15
+	lea rax, [rsp + 128]
+	mov qword ptr [rsp + 72], rax
+	mov qword ptr [rsp + 80], rbx
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/core/src/fmt/mod.rs : 398
+		Arguments { pieces, fmt: None, args }
+	mov qword ptr [rsp], r12
+	mov qword ptr [rsp + 8], 3
+	mov qword ptr [rsp + 16], 0
+	mov qword ptr [rsp + 32], r13
+	mov qword ptr [rsp + 40], 2
+
+	mov rdi, rsp
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 188
+		println!("{r} {obv:?}");
+	call qword ptr [rip + std::io::stdio::_print@GOTPCREL]
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 189
+		assert_eq!(r, -1);
+	cmp qword ptr [rsp + 304], -1
+
+	jne .LBB19_114
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/alloc.rs : 95
+		unsafe { __rust_alloc(layout.size(), layout.align()) }
+	mov edi, 1
+	mov esi, 1
+	call qword ptr [rip + __rust_alloc@GOTPCREL]
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/alloc.rs : 326
+		match Global.allocate(layout) {
+	test rax, rax
+	je .LBB19_88
+
+	mov rdi, rax
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/boxed.rs : 220
+		Box::new(x)
+	mov byte ptr [rax], -1
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 190
+		assert_eq!(obv, Some(Box::new(255)));
+	mov qword ptr [rsp + 56], rax
+
+	mov rax, qword ptr [rsp + 128]
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/core/src/option.rs : 515
+		#[derive(Copy, PartialEq, PartialOrd, Eq, Ord, Debug, Hash)]
+	test rax, rax
+
+	je .LBB19_87
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/core/src/cmp.rs : 1346
+		fn eq(&self, other: &$t) -> bool { (*self) == (*other) }
+	cmp byte ptr [rax], -1
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 190
+		assert_eq!(obv, Some(Box::new(255)));
+	jne .LBB19_87
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/alloc.rs : 113
+		unsafe { __rust_dealloc(ptr, layout.size(), layout.align()) }
+	mov esi, 1
+	mov edx, 1
+	call qword ptr [rip + __rust_dealloc@GOTPCREL]
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/alloc.rs : 95
+		unsafe { __rust_alloc(layout.size(), layout.align()) }
+	mov edi, 1
+	mov esi, 1
+	call qword ptr [rip + __rust_alloc@GOTPCREL]
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/alloc.rs : 326
+		match Global.allocate(layout) {
+	test rax, rax
+	je .LBB19_88
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/boxed.rs : 220
+		Box::new(x)
+	mov byte ptr [rax], -128
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 192
+		let (r, obv) = check_box_of_val_ret_val_option_box(val);
+	mov rdi, rax
+	call qword ptr [rip + exper_option::check_box_of_val_ret_val_option_box@GOTPCREL]
+
+	mov qword ptr [rsp + 312], rax
+
+	mov qword ptr [rsp + 136], rdx
+	lea rax, [rsp + 312]
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 193
+		println!("{r} {obv:?}");
+	mov qword ptr [rsp + 56], rax
+	mov qword ptr [rsp + 64], r15
+	lea rax, [rsp + 136]
+	mov qword ptr [rsp + 72], rax
+	mov qword ptr [rsp + 80], rbx
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/core/src/fmt/mod.rs : 398
+		Arguments { pieces, fmt: None, args }
+	mov qword ptr [rsp], r12
+	mov qword ptr [rsp + 8], 3
+	mov qword ptr [rsp + 16], 0
+	mov qword ptr [rsp + 32], r13
+	mov qword ptr [rsp + 40], 2
+
+	mov rdi, rsp
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 193
+		println!("{r} {obv:?}");
+	call qword ptr [rip + std::io::stdio::_print@GOTPCREL]
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 194
+		assert_eq!(r, -2);
+	cmp qword ptr [rsp + 312], -2
+
+	jne .LBB19_115
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/core/src/option.rs : 515
+		#[derive(Copy, PartialEq, PartialOrd, Eq, Ord, Debug, Hash)]
+	cmp qword ptr [rsp + 136], 0
+
+	jne .LBB19_116
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/alloc.rs : 95
+		unsafe { __rust_alloc(layout.size(), layout.align()) }
+	mov edi, 1
+	mov esi, 1
+	call qword ptr [rip + __rust_alloc@GOTPCREL]
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/alloc.rs : 326
+		match Global.allocate(layout) {
+	test rax, rax
+	je .LBB19_117
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/boxed.rs : 220
+		Box::new(x)
+	mov byte ptr [rax], 3
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 198
+		let (r, obv) = check_box_of_val_ret_val_box(val);
+	mov rdi, rax
+	call qword ptr [rip + exper_option::check_box_of_val_ret_val_box@GOTPCREL]
+
+	mov qword ptr [rsp + 320], rax
+
+	mov qword ptr [rsp + 144], rdx
+	lea rax, [rsp + 320]
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 199
+		println!("{r} {obv:?}");
+	mov qword ptr [rsp + 56], rax
+	mov qword ptr [rsp + 64], r15
+	lea rax, [rsp + 144]
+	mov qword ptr [rsp + 72], rax
+	lea rbx, [rip + <alloc::boxed::Box<T,A> as core::fmt::Debug>::fmt]
+	mov qword ptr [rsp + 80], rbx
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/core/src/fmt/mod.rs : 398
+		Arguments { pieces, fmt: None, args }
+	mov qword ptr [rsp], r12
+	mov qword ptr [rsp + 8], 3
+	mov qword ptr [rsp + 16], 0
+	mov qword ptr [rsp + 32], r13
+	mov qword ptr [rsp + 40], 2
+
+	mov rdi, rsp
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 199
+		println!("{r} {obv:?}");
+	call qword ptr [rip + std::io::stdio::_print@GOTPCREL]
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 200
+		assert_eq!(r, 3);
+	cmp qword ptr [rsp + 320], 3
+
+	jne .LBB19_118
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/alloc.rs : 95
+		unsafe { __rust_alloc(layout.size(), layout.align()) }
+	mov edi, 1
+	mov esi, 1
+	call qword ptr [rip + __rust_alloc@GOTPCREL]
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/alloc.rs : 326
+		match Global.allocate(layout) {
+	test rax, rax
+	je .LBB19_89
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/boxed.rs : 220
+		Box::new(x)
+	mov qword ptr [rsp + 56], rax
+	mov byte ptr [rax], 3
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/boxed.rs : 1340
+		PartialEq::eq(&**self, &**other)
+	mov rcx, qword ptr [rsp + 144]
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/core/src/cmp.rs : 1346
+		fn eq(&self, other: &$t) -> bool { (*self) == (*other) }
+	cmp byte ptr [rcx], 3
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 201
+		assert_eq!(obv, Box::new(3));
+	jne .LBB19_119
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/alloc.rs : 113
+		unsafe { __rust_dealloc(ptr, layout.size(), layout.align()) }
+	mov esi, 1
+	mov edx, 1
+	mov rdi, rax
+	call qword ptr [rip + __rust_dealloc@GOTPCREL]
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/alloc.rs : 95
+		unsafe { __rust_alloc(layout.size(), layout.align()) }
+	mov edi, 1
+	mov esi, 1
+	call qword ptr [rip + __rust_alloc@GOTPCREL]
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/alloc.rs : 326
+		match Global.allocate(layout) {
+	test rax, rax
+	je .LBB19_89
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/boxed.rs : 220
+		Box::new(x)
+	mov byte ptr [rax], -1
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 203
+		let (r, obv) = check_box_of_val_ret_val_box(val);
+	mov rdi, rax
+	call qword ptr [rip + exper_option::check_box_of_val_ret_val_box@GOTPCREL]
+
+	mov qword ptr [rsp + 328], rax
+
+	mov qword ptr [rsp + 88], rdx
+	lea rax, [rsp + 328]
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 204
+		println!("{r} {obv:?}");
+	mov qword ptr [rsp + 56], rax
+	mov qword ptr [rsp + 64], r15
+	mov qword ptr [rsp + 72], rbp
+	mov qword ptr [rsp + 80], rbx
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/core/src/fmt/mod.rs : 398
+		Arguments { pieces, fmt: None, args }
+	mov qword ptr [rsp], r12
+	mov qword ptr [rsp + 8], 3
+	mov qword ptr [rsp + 16], 0
+	mov qword ptr [rsp + 32], r13
+	mov qword ptr [rsp + 40], 2
+
+	mov rdi, rsp
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 204
+		println!("{r} {obv:?}");
+	call qword ptr [rip + std::io::stdio::_print@GOTPCREL]
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 205
+		assert_eq!(r, -1);
+	cmp qword ptr [rsp + 328], -1
+
+	jne .LBB19_120
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/alloc.rs : 95
+		unsafe { __rust_alloc(layout.size(), layout.align()) }
+	mov edi, 1
+	mov esi, 1
+	call qword ptr [rip + __rust_alloc@GOTPCREL]
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/alloc.rs : 326
+		match Global.allocate(layout) {
+	test rax, rax
+	je .LBB19_121
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/boxed.rs : 220
+		Box::new(x)
+	mov qword ptr [rsp + 56], rax
+	mov byte ptr [rax], -1
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/boxed.rs : 1340
+		PartialEq::eq(&**self, &**other)
+	mov rcx, qword ptr [rsp + 88]
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/core/src/cmp.rs : 1346
+		fn eq(&self, other: &$t) -> bool { (*self) == (*other) }
+	cmp byte ptr [rcx], -1
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 206
+		assert_eq!(obv, Box::new(255));
+	jne .LBB19_122
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/alloc.rs : 113
+		unsafe { __rust_dealloc(ptr, layout.size(), layout.align()) }
+	mov rbx, qword ptr [rip + __rust_dealloc@GOTPCREL]
+	mov esi, 1
+	mov edx, 1
+	mov rdi, rax
+	call rbx
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 207
+		}
+	mov rdi, qword ptr [rsp + 88]
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/alloc.rs : 113
+		unsafe { __rust_dealloc(ptr, layout.size(), layout.align()) }
+	mov esi, 1
+	mov edx, 1
+	call rbx
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 207
+		}
+	mov rdi, qword ptr [rsp + 144]
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/alloc.rs : 113
+		unsafe { __rust_dealloc(ptr, layout.size(), layout.align()) }
+	mov esi, 1
+	mov edx, 1
+	call rbx
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 207
+		}
+	mov rdi, qword ptr [rsp + 136]
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/core/src/ptr/mod.rs : 487
+		pub unsafe fn drop_in_place<T: ?Sized>(to_drop: *mut T) {
+	test rdi, rdi
+	je .LBB19_70
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/alloc.rs : 113
+		unsafe { __rust_dealloc(ptr, layout.size(), layout.align()) }
+	mov esi, 1
+	mov edx, 1
+	call qword ptr [rip + __rust_dealloc@GOTPCREL]
+
+.LBB19_70:
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 207
+		}
+	mov rdi, qword ptr [rsp + 128]
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/core/src/ptr/mod.rs : 487
+		pub unsafe fn drop_in_place<T: ?Sized>(to_drop: *mut T) {
+	test rdi, rdi
+	je .LBB19_72
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/alloc.rs : 113
+		unsafe { __rust_dealloc(ptr, layout.size(), layout.align()) }
+	mov esi, 1
+	mov edx, 1
+	call qword ptr [rip + __rust_dealloc@GOTPCREL]
+
+.LBB19_72:
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 207
+		}
+	mov rdi, qword ptr [rsp + 120]
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/core/src/ptr/mod.rs : 487
+		pub unsafe fn drop_in_place<T: ?Sized>(to_drop: *mut T) {
+	test rdi, rdi
+	je .LBB19_74
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/alloc.rs : 113
+		unsafe { __rust_dealloc(ptr, layout.size(), layout.align()) }
+	mov esi, 1
+	mov edx, 1
+	call qword ptr [rip + __rust_dealloc@GOTPCREL]
+
+.LBB19_74:
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 207
+		}
+	mov rdi, qword ptr [rsp + 112]
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/core/src/ptr/mod.rs : 487
+		pub unsafe fn drop_in_place<T: ?Sized>(to_drop: *mut T) {
+	test rdi, rdi
+	je .LBB19_76
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/alloc.rs : 113
+		unsafe { __rust_dealloc(ptr, layout.size(), layout.align()) }
+	mov esi, 1
+	mov edx, 1
+	call qword ptr [rip + __rust_dealloc@GOTPCREL]
+
+.LBB19_76:
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 207
+		}
+	mov rdi, qword ptr [rsp + 104]
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/core/src/ptr/mod.rs : 487
+		pub unsafe fn drop_in_place<T: ?Sized>(to_drop: *mut T) {
+	test rdi, rdi
+	je .LBB19_78
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/alloc.rs : 113
+		unsafe { __rust_dealloc(ptr, layout.size(), layout.align()) }
+	mov esi, 1
+	mov edx, 1
+	call qword ptr [rip + __rust_dealloc@GOTPCREL]
+
+.LBB19_78:
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 207
+		}
+	mov rdi, qword ptr [rsp + 96]
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/core/src/ptr/mod.rs : 487
+		pub unsafe fn drop_in_place<T: ?Sized>(to_drop: *mut T) {
+	test rdi, rdi
+	je .LBB19_80
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/alloc.rs : 113
+		unsafe { __rust_dealloc(ptr, layout.size(), layout.align()) }
+	mov esi, 1
+	mov edx, 1
+	call qword ptr [rip + __rust_dealloc@GOTPCREL]
+
+.LBB19_80:
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 207
+		}
+	add rsp, 344
+	.cfi_def_cfa_offset 56
+	pop rbx
+	.cfi_def_cfa_offset 48
+	pop r12
+	.cfi_def_cfa_offset 40
+	pop r13
+	.cfi_def_cfa_offset 32
+	pop r14
+	.cfi_def_cfa_offset 24
+	pop r15
+	.cfi_def_cfa_offset 16
+	pop rbp
+	.cfi_def_cfa_offset 8
+	ret
+.LBB19_81:
+	.cfi_def_cfa_offset 400
+
+	mov edi, 1
+	mov esi, 1
+	call qword ptr [rip + alloc::alloc::handle_alloc_error@GOTPCREL]
+	ud2
+
+.LBB19_82:
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 170
+		assert_eq!(obv, Some(Box::new(3)));
+	mov qword ptr [rsp], 0
+
+	lea rcx, [rip + .L__unnamed_42]
+	lea rdi, [rsp + 96]
+	lea rsi, [rsp + 56]
+	mov rdx, rsp
+	call core::panicking::assert_failed
+
+	jmp .LBB19_123
+
+.LBB19_83:
+	mov edi, 1
+	mov esi, 1
+	call qword ptr [rip + alloc::alloc::handle_alloc_error@GOTPCREL]
+
+	jmp .LBB19_123
+
+.LBB19_84:
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 175
+		assert_eq!(obv, Some(Box::new(255)));
+	mov qword ptr [rsp], 0
+
+	lea rcx, [rip + .L__unnamed_43]
+	lea rdi, [rsp + 104]
+	lea rsi, [rsp + 56]
+	mov rdx, rsp
+	call core::panicking::assert_failed
+
+	jmp .LBB19_123
+
+.LBB19_85:
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 185
+		assert_eq!(obv, Some(Box::new(3)));
+	mov qword ptr [rsp], 0
+
+	lea rcx, [rip + .L__unnamed_44]
+	lea rdi, [rsp + 120]
+	lea rsi, [rsp + 56]
+	mov rdx, rsp
+	call core::panicking::assert_failed
+
+	jmp .LBB19_123
+
+.LBB19_86:
+	mov edi, 1
+	mov esi, 1
+	call qword ptr [rip + alloc::alloc::handle_alloc_error@GOTPCREL]
+
+	jmp .LBB19_123
+
+.LBB19_87:
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 190
+		assert_eq!(obv, Some(Box::new(255)));
+	mov qword ptr [rsp], 0
+
+	lea rcx, [rip + .L__unnamed_45]
+	lea rdi, [rsp + 128]
+	lea rsi, [rsp + 56]
+	mov rdx, rsp
+	call core::panicking::assert_failed
+
+	jmp .LBB19_123
+
+.LBB19_88:
+	mov edi, 1
+	mov esi, 1
+	call qword ptr [rip + alloc::alloc::handle_alloc_error@GOTPCREL]
+
+	jmp .LBB19_123
+
+.LBB19_89:
+	mov edi, 1
+	mov esi, 1
+	call qword ptr [rip + alloc::alloc::handle_alloc_error@GOTPCREL]
+
+	jmp .LBB19_123
+
+.LBB19_90:
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 69
+		assert_eq!(size_of::<Option<&u8>>(), size_ptr);
+	mov qword ptr [rsp], 0
+
+	lea rdx, [rip + .L__unnamed_46]
+	lea rdi, [rsp + 336]
+	mov rsi, rsp
 	call core::panicking::assert_failed
 	ud2
 
-	.size	exper_some::main, .Lfunc_end7-exper_some::main
+.LBB19_91:
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 109
+		assert_eq!(r, 3);
+	mov qword ptr [rsp], 0
+
+	lea rsi, [rip + .L__unnamed_47]
+	lea rcx, [rip + .L__unnamed_48]
+	lea rdi, [rsp + 152]
+	jmp .LBB19_106
+
+.LBB19_92:
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 112
+		assert_eq!(r, -1);
+	mov qword ptr [rsp], 0
+
+	lea rsi, [rip + .L__unnamed_49]
+	lea rcx, [rip + .L__unnamed_50]
+	lea rdi, [rsp + 160]
+	jmp .LBB19_106
+
+.LBB19_93:
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 115
+		assert_eq!(r, -2);
+	mov qword ptr [rsp], 0
+
+	lea rsi, [rip + .L__unnamed_51]
+	lea rcx, [rip + .L__unnamed_52]
+	lea rdi, [rsp + 168]
+	jmp .LBB19_106
+
+.LBB19_94:
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 119
+		assert_eq!(r, 3);
+	mov qword ptr [rsp], 0
+
+	lea rsi, [rip + .L__unnamed_47]
+	lea rcx, [rip + .L__unnamed_53]
+	lea rdi, [rsp + 176]
+	jmp .LBB19_106
+
+.LBB19_95:
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 122
+		assert_eq!(r, -1);
+	mov qword ptr [rsp], 0
+
+	lea rsi, [rip + .L__unnamed_49]
+	lea rcx, [rip + .L__unnamed_54]
+	lea rdi, [rsp + 184]
+	jmp .LBB19_106
+
+.LBB19_96:
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 127
+		assert_eq!(r, 3);
+	mov qword ptr [rsp], 0
+
+	lea rsi, [rip + .L__unnamed_47]
+	lea rcx, [rip + .L__unnamed_55]
+	lea rdi, [rsp + 192]
+	jmp .LBB19_106
+
+.LBB19_97:
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 131
+		assert_eq!(r, -1);
+	mov qword ptr [rsp], 0
+
+	lea rsi, [rip + .L__unnamed_49]
+	lea rcx, [rip + .L__unnamed_56]
+	lea rdi, [rsp + 200]
+	jmp .LBB19_106
+
+.LBB19_98:
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 134
+		assert_eq!(r, -2);
+	mov qword ptr [rsp], 0
+
+	lea rsi, [rip + .L__unnamed_51]
+	lea rcx, [rip + .L__unnamed_57]
+	lea rdi, [rsp + 208]
+	jmp .LBB19_106
+
+.LBB19_99:
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 139
+		assert_eq!(r, 3);
+	mov qword ptr [rsp], 0
+
+	lea rsi, [rip + .L__unnamed_47]
+	lea rcx, [rip + .L__unnamed_58]
+	lea rdi, [rsp + 216]
+	jmp .LBB19_106
+
+.LBB19_100:
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 143
+		assert_eq!(r, -1);
+	mov qword ptr [rsp], 0
+
+	lea rsi, [rip + .L__unnamed_49]
+	lea rcx, [rip + .L__unnamed_59]
+	lea rdi, [rsp + 224]
+	jmp .LBB19_106
+
+.LBB19_101:
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 148
+		assert_eq!(r, 3);
+	mov qword ptr [rsp], 0
+
+	lea rsi, [rip + .L__unnamed_47]
+	lea rcx, [rip + .L__unnamed_60]
+	lea rdi, [rsp + 232]
+	jmp .LBB19_106
+
+.LBB19_102:
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 152
+		assert_eq!(r, -1);
+	mov qword ptr [rsp], 0
+
+	lea rsi, [rip + .L__unnamed_49]
+	lea rcx, [rip + .L__unnamed_61]
+	lea rdi, [rsp + 240]
+	jmp .LBB19_106
+
+.LBB19_103:
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 155
+		assert_eq!(r, -2);
+	mov qword ptr [rsp], 0
+
+	lea rsi, [rip + .L__unnamed_51]
+	lea rcx, [rip + .L__unnamed_62]
+	lea rdi, [rsp + 248]
+	jmp .LBB19_106
+
+.LBB19_104:
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 160
+		assert_eq!(r, 3);
+	mov qword ptr [rsp], 0
+
+	lea rsi, [rip + .L__unnamed_47]
+	lea rcx, [rip + .L__unnamed_63]
+	lea rdi, [rsp + 256]
+	jmp .LBB19_106
+
+.LBB19_105:
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 164
+		assert_eq!(r, -1);
+	mov qword ptr [rsp], 0
+
+	lea rsi, [rip + .L__unnamed_49]
+	lea rcx, [rip + .L__unnamed_64]
+	lea rdi, [rsp + 264]
+
+.LBB19_106:
+	mov rdx, rsp
+	call core::panicking::assert_failed
+	ud2
+
+.LBB19_107:
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 169
+		assert_eq!(r, 3);
+	mov qword ptr [rsp], 0
+
+	lea rsi, [rip + .L__unnamed_47]
+	lea rcx, [rip + .L__unnamed_65]
+	lea rdi, [rsp + 272]
+	mov rdx, rsp
+	call core::panicking::assert_failed
+
+	jmp .LBB19_123
+
+.LBB19_108:
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 174
+		assert_eq!(r, -1);
+	mov qword ptr [rsp], 0
+
+	lea rsi, [rip + .L__unnamed_49]
+	lea rcx, [rip + .L__unnamed_66]
+	lea rdi, [rsp + 280]
+	mov rdx, rsp
+	call core::panicking::assert_failed
+
+	jmp .LBB19_123
+
+.LBB19_109:
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/alloc.rs : 328
+		Err(_) => handle_alloc_error(layout),
+	mov edi, 1
+	mov esi, 1
+	call qword ptr [rip + alloc::alloc::handle_alloc_error@GOTPCREL]
+
+	jmp .LBB19_123
+
+.LBB19_110:
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 178
+		assert_eq!(r, -2);
+	mov qword ptr [rsp], 0
+
+	lea rsi, [rip + .L__unnamed_51]
+	lea rcx, [rip + .L__unnamed_67]
+	lea rdi, [rsp + 288]
+	mov rdx, rsp
+	call core::panicking::assert_failed
+
+	jmp .LBB19_123
+
+.LBB19_111:
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 179
+		assert_eq!(obv, None);
+	mov qword ptr [rsp], 0
+
+	lea rsi, [rip + .L__unnamed_33]
+	lea rcx, [rip + .L__unnamed_68]
+	lea rdi, [rsp + 112]
+	mov rdx, rsp
+	call core::panicking::assert_failed
+
+	jmp .LBB19_123
+
+.LBB19_112:
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/alloc.rs : 328
+		Err(_) => handle_alloc_error(layout),
+	mov edi, 1
+	mov esi, 1
+	call qword ptr [rip + alloc::alloc::handle_alloc_error@GOTPCREL]
+
+	jmp .LBB19_123
+
+.LBB19_113:
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 184
+		assert_eq!(r, 3);
+	mov qword ptr [rsp], 0
+
+	lea rsi, [rip + .L__unnamed_47]
+	lea rcx, [rip + .L__unnamed_69]
+	lea rdi, [rsp + 296]
+	mov rdx, rsp
+	call core::panicking::assert_failed
+
+	jmp .LBB19_123
+
+.LBB19_114:
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 189
+		assert_eq!(r, -1);
+	mov qword ptr [rsp], 0
+
+	lea rsi, [rip + .L__unnamed_49]
+	lea rcx, [rip + .L__unnamed_70]
+	lea rdi, [rsp + 304]
+	mov rdx, rsp
+	call core::panicking::assert_failed
+
+	jmp .LBB19_123
+
+.LBB19_115:
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 194
+		assert_eq!(r, -2);
+	mov qword ptr [rsp], 0
+
+	lea rsi, [rip + .L__unnamed_51]
+	lea rcx, [rip + .L__unnamed_71]
+	lea rdi, [rsp + 312]
+	mov rdx, rsp
+	call core::panicking::assert_failed
+
+	jmp .LBB19_123
+
+.LBB19_116:
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 195
+		assert_eq!(obv, None);
+	mov qword ptr [rsp], 0
+
+	lea rsi, [rip + .L__unnamed_33]
+	lea rcx, [rip + .L__unnamed_72]
+	lea rdi, [rsp + 136]
+	mov rdx, rsp
+	call core::panicking::assert_failed
+
+	jmp .LBB19_123
+
+.LBB19_117:
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/alloc.rs : 328
+		Err(_) => handle_alloc_error(layout),
+	mov edi, 1
+	mov esi, 1
+	call qword ptr [rip + alloc::alloc::handle_alloc_error@GOTPCREL]
+
+	jmp .LBB19_123
+
+.LBB19_118:
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 200
+		assert_eq!(r, 3);
+	mov qword ptr [rsp], 0
+
+	lea rsi, [rip + .L__unnamed_47]
+	lea rcx, [rip + .L__unnamed_73]
+	lea rdi, [rsp + 320]
+	mov rdx, rsp
+	call core::panicking::assert_failed
+
+	jmp .LBB19_123
+
+.LBB19_119:
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 201
+		assert_eq!(obv, Box::new(3));
+	mov qword ptr [rsp], 0
+
+	lea rcx, [rip + .L__unnamed_74]
+
+	lea rdi, [rsp + 144]
+	lea rsi, [rsp + 56]
+	mov rdx, rsp
+	call core::panicking::assert_failed
+
+	jmp .LBB19_123
+
+.LBB19_120:
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 205
+		assert_eq!(r, -1);
+	mov qword ptr [rsp], 0
+
+	lea rsi, [rip + .L__unnamed_49]
+	lea rcx, [rip + .L__unnamed_75]
+	lea rdi, [rsp + 328]
+	mov rdx, rsp
+	call core::panicking::assert_failed
+
+	jmp .LBB19_123
+
+.LBB19_121:
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/alloc.rs : 328
+		Err(_) => handle_alloc_error(layout),
+	mov edi, 1
+	mov esi, 1
+	call qword ptr [rip + alloc::alloc::handle_alloc_error@GOTPCREL]
+
+	jmp .LBB19_123
+
+.LBB19_122:
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 206
+		assert_eq!(obv, Box::new(255));
+	mov qword ptr [rsp], 0
+
+	lea rcx, [rip + .L__unnamed_76]
+
+	lea rdi, [rsp + 88]
+	lea rsi, [rsp + 56]
+	mov rdx, rsp
+	call core::panicking::assert_failed
+
+.LBB19_123:
+	ud2
+
+	mov rbx, rax
+	mov rdi, qword ptr [rsp + 56]
+	call core::ptr::drop_in_place<alloc::boxed::Box<u8>>
+	jmp .LBB19_131
+
+	mov rbx, rax
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 201
+		assert_eq!(obv, Box::new(3));
+	mov rdi, qword ptr [rsp + 56]
+	jmp .LBB19_132
+
+	mov rbx, rax
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 190
+		assert_eq!(obv, Some(Box::new(255)));
+	mov rdi, qword ptr [rsp + 56]
+	jmp .LBB19_138
+
+	mov rbx, rax
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 185
+		assert_eq!(obv, Some(Box::new(3)));
+	mov rdi, qword ptr [rsp + 56]
+	jmp .LBB19_141
+
+	mov rbx, rax
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 175
+		assert_eq!(obv, Some(Box::new(255)));
+	mov rdi, qword ptr [rsp + 56]
+	jmp .LBB19_144
+
+	mov rbx, rax
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 170
+		assert_eq!(obv, Some(Box::new(3)));
+	mov rdi, qword ptr [rsp + 56]
+	jmp .LBB19_146
+
+	mov rbx, rax
+
+.LBB19_131:
+		// /home/wink/prgs/rust/myrepos/exper-option/src/main.rs : 207
+		}
+	mov rdi, qword ptr [rsp + 88]
+
+.LBB19_132:
+	call core::ptr::drop_in_place<alloc::boxed::Box<u8>>
+	jmp .LBB19_135
+
+	mov rbx, rax
+	jmp .LBB19_145
+
+	mov rbx, rax
+
+.LBB19_135:
+	mov rdi, qword ptr [rsp + 144]
+	call core::ptr::drop_in_place<alloc::boxed::Box<u8>>
+	jmp .LBB19_137
+
+	mov rbx, rax
+
+.LBB19_137:
+	mov rdi, qword ptr [rsp + 136]
+
+.LBB19_138:
+	call core::ptr::drop_in_place<core::option::Option<alloc::boxed::Box<u8>>>
+	jmp .LBB19_140
+
+	mov rbx, rax
+
+.LBB19_140:
+	mov rdi, qword ptr [rsp + 128]
+
+.LBB19_141:
+	call core::ptr::drop_in_place<core::option::Option<alloc::boxed::Box<u8>>>
+
+.LBB19_142:
+	mov rdi, qword ptr [rsp + 120]
+	call core::ptr::drop_in_place<core::option::Option<alloc::boxed::Box<u8>>>
+
+.LBB19_143:
+	mov rdi, qword ptr [rsp + 112]
+
+.LBB19_144:
+	call core::ptr::drop_in_place<core::option::Option<alloc::boxed::Box<u8>>>
+
+.LBB19_145:
+	mov rdi, qword ptr [rsp + 104]
+
+.LBB19_146:
+	call core::ptr::drop_in_place<core::option::Option<alloc::boxed::Box<u8>>>
+
+.LBB19_147:
+	mov rdi, qword ptr [rsp + 96]
+	call core::ptr::drop_in_place<core::option::Option<alloc::boxed::Box<u8>>>
+	mov rdi, rbx
+	call _Unwind_Resume@PLT
+	ud2
+
+	mov rbx, rax
+	jmp .LBB19_142
+
+	mov rbx, rax
+	jmp .LBB19_143
+
+	mov rbx, rax
+	jmp .LBB19_147
+
+	.size	exper_option::main, .Lfunc_end19-exper_option::main

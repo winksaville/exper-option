@@ -1,0 +1,21 @@
+.section .text.exper_option::check_box_of_val_ret_val_box,"ax",@progbits
+	.globl	exper_option::check_box_of_val_ret_val_box
+	.p2align	4, 0x90
+	.type	exper_option::check_box_of_val_ret_val_box,@function
+exper_option::check_box_of_val_ret_val_box:
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/lib.rs : 92
+		pub fn check_box_of_val_ret_val_box(param: Box<u8>) -> (isize, Box<u8>) {
+	.cfi_startproc
+		// /home/wink/prgs/rust/myrepos/exper-option/src/lib.rs : 93
+		if *param < 128 {
+	movzx ecx, byte ptr [rdi]
+	test cl, cl
+	mov rax, -1
+	cmovns rax, rcx
+		// /home/wink/prgs/rust/myrepos/exper-option/src/lib.rs : 98
+		}
+	mov rdx, rdi
+	ret
+
+	.size	exper_option::check_box_of_val_ret_val_box, .Lfunc_end8-exper_option::check_box_of_val_ret_val_box

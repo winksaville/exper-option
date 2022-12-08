@@ -1,0 +1,33 @@
+.section .text.exper_option::check_box_of_val,"ax",@progbits
+	.globl	exper_option::check_box_of_val
+	.p2align	4, 0x90
+	.type	exper_option::check_box_of_val,@function
+exper_option::check_box_of_val:
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/lib.rs : 55
+		pub fn check_box_of_val(param: Box<u8>) -> isize {
+	.cfi_startproc
+	push rbx
+	.cfi_def_cfa_offset 16
+	.cfi_offset rbx, -16
+		// /home/wink/prgs/rust/myrepos/exper-option/src/lib.rs : 56
+		if *param < 128 {
+	movzx eax, byte ptr [rdi]
+	test al, al
+	mov rbx, -1
+	cmovns rbx, rax
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/alloc.rs : 113
+		unsafe { __rust_dealloc(ptr, layout.size(), layout.align()) }
+	mov esi, 1
+	mov edx, 1
+	call qword ptr [rip + __rust_dealloc@GOTPCREL]
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/lib.rs : 61
+		}
+	mov rax, rbx
+	pop rbx
+	.cfi_def_cfa_offset 8
+	ret
+
+	.size	exper_option::check_box_of_val, .Lfunc_end5-exper_option::check_box_of_val

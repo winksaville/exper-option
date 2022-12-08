@@ -1,0 +1,49 @@
+.section .text.exper_option::check_box_of_val_ret_val_option_box,"ax",@progbits
+	.globl	exper_option::check_box_of_val_ret_val_option_box
+	.p2align	4, 0x90
+	.type	exper_option::check_box_of_val_ret_val_option_box,@function
+exper_option::check_box_of_val_ret_val_option_box:
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/lib.rs : 84
+		pub fn check_box_of_val_ret_val_option_box(param: Box<u8>) -> (isize, Option<Box<u8>>) {
+	.cfi_startproc
+	push rax
+	.cfi_def_cfa_offset 16
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/lib.rs : 85
+		match *param {
+	movzx ecx, byte ptr [rdi]
+	cmp rcx, 128
+	jne .LBB7_1
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/alloc.rs : 113
+		unsafe { __rust_dealloc(ptr, layout.size(), layout.align()) }
+	mov esi, 1
+	mov edx, 1
+	call qword ptr [rip + __rust_dealloc@GOTPCREL]
+
+	mov rax, -2
+	xor edi, edi
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/lib.rs : 90
+		}
+	mov rdx, rdi
+	pop rcx
+	.cfi_def_cfa_offset 8
+	ret
+
+.LBB7_1:
+	.cfi_def_cfa_offset 16
+		// /home/wink/prgs/rust/myrepos/exper-option/src/lib.rs : 87
+		0..=127 => (*param as isize, Some(param)),
+	test cl, cl
+	mov rax, -1
+	cmovns rax, rcx
+		// /home/wink/prgs/rust/myrepos/exper-option/src/lib.rs : 90
+		}
+	mov rdx, rdi
+	pop rcx
+	.cfi_def_cfa_offset 8
+	ret
+
+	.size	exper_option::check_box_of_val_ret_val_option_box, .Lfunc_end7-exper_option::check_box_of_val_ret_val_option_box

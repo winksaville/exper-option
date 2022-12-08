@@ -1,0 +1,33 @@
+.section .text.bench_iai::iai_wrappers::bench_iai_check_option_ptr_to_val_ret_val,"ax",@progbits
+	.p2align	4, 0x90
+	.type	bench_iai::iai_wrappers::bench_iai_check_option_ptr_to_val_ret_val,@function
+bench_iai::iai_wrappers::bench_iai_check_option_ptr_to_val_ret_val:
+
+		// /home/wink/.cargo/registry/src/github.com-1ecc6299db9ec823/iai-0.1.1/src/macros.rs : 41
+		pub fn $func_name() {
+	.cfi_startproc
+	sub rsp, 24
+	.cfi_def_cfa_offset 32
+
+		// /home/wink/prgs/rust/myrepos/exper-option/benches/iai_bench.rs : 247
+		let val = 21;
+	mov byte ptr [rsp + 15], 21
+
+	lea rdi, [rsp + 15]
+
+		// /home/wink/prgs/rust/myrepos/exper-option/benches/iai_bench.rs : 248
+		black_box(check_option_ptr_to_val(Some(&val)));
+	call qword ptr [rip + exper_option::check_option_ptr_to_val@GOTPCREL]
+	mov qword ptr [rsp + 16], rax
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/core/src/ptr/mod.rs : 1474
+		intrinsics::volatile_load(src)
+	mov rax, qword ptr [rsp + 16]
+
+		// /home/wink/.cargo/registry/src/github.com-1ecc6299db9ec823/iai-0.1.1/src/macros.rs : 43
+		}
+	add rsp, 24
+	.cfi_def_cfa_offset 8
+	ret
+
+	.size	bench_iai::iai_wrappers::bench_iai_check_option_ptr_to_val_ret_val, .Lfunc_end10-bench_iai::iai_wrappers::bench_iai_check_option_ptr_to_val_ret_val

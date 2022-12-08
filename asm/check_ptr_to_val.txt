@@ -1,0 +1,20 @@
+.section .text.exper_option::check_ptr_to_val,"ax",@progbits
+	.globl	exper_option::check_ptr_to_val
+	.p2align	4, 0x90
+	.type	exper_option::check_ptr_to_val,@function
+exper_option::check_ptr_to_val:
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/lib.rs : 34
+		pub fn check_ptr_to_val(param: &u8) -> isize {
+	.cfi_startproc
+		// /home/wink/prgs/rust/myrepos/exper-option/src/lib.rs : 35
+		if *param < 128 {
+	movzx ecx, byte ptr [rdi]
+	test cl, cl
+	mov rax, -1
+	cmovns rax, rcx
+		// /home/wink/prgs/rust/myrepos/exper-option/src/lib.rs : 40
+		}
+	ret
+
+	.size	exper_option::check_ptr_to_val, .Lfunc_end3-exper_option::check_ptr_to_val

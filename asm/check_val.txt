@@ -1,0 +1,20 @@
+.section .text.exper_option::check_val,"ax",@progbits
+	.globl	exper_option::check_val
+	.p2align	4, 0x90
+	.type	exper_option::check_val,@function
+exper_option::check_val:
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/lib.rs : 14
+		pub fn check_val(param: u8) -> isize {
+	.cfi_startproc
+		// /home/wink/prgs/rust/myrepos/exper-option/src/lib.rs : 15
+		if param < 128 {
+	test dil, dil
+	movzx ecx, dil
+	mov rax, -1
+	cmovns rax, rcx
+		// /home/wink/prgs/rust/myrepos/exper-option/src/lib.rs : 20
+		}
+	ret
+
+	.size	exper_option::check_val, .Lfunc_end1-exper_option::check_val

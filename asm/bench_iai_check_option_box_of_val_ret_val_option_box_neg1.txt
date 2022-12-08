@@ -1,0 +1,70 @@
+.section .text.bench_iai::iai_wrappers::bench_iai_check_option_box_of_val_ret_val_option_box_neg1,"ax",@progbits
+	.p2align	4, 0x90
+	.type	bench_iai::iai_wrappers::bench_iai_check_option_box_of_val_ret_val_option_box_neg1,@function
+bench_iai::iai_wrappers::bench_iai_check_option_box_of_val_ret_val_option_box_neg1:
+
+		// /home/wink/.cargo/registry/src/github.com-1ecc6299db9ec823/iai-0.1.1/src/macros.rs : 41
+		pub fn $func_name() {
+	.cfi_startproc
+	sub rsp, 24
+	.cfi_def_cfa_offset 32
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/alloc.rs : 95
+		unsafe { __rust_alloc(layout.size(), layout.align()) }
+	mov edi, 1
+	mov esi, 1
+	call qword ptr [rip + __rust_alloc@GOTPCREL]
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/alloc.rs : 326
+		match Global.allocate(layout) {
+	test rax, rax
+	je .LBB21_3
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/boxed.rs : 220
+		Box::new(x)
+	mov byte ptr [rax], -14
+
+		// /home/wink/prgs/rust/myrepos/exper-option/benches/iai_bench.rs : 312
+		black_box(check_option_box_of_val_ret_val_option_box(Some(val)));
+	mov rdi, rax
+	call qword ptr [rip + exper_option::check_option_box_of_val_ret_val_option_box@GOTPCREL]
+
+	mov qword ptr [rsp + 8], rax
+	mov qword ptr [rsp + 16], rdx
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/core/src/ptr/mod.rs : 1474
+		intrinsics::volatile_load(src)
+	mov rax, qword ptr [rsp + 8]
+	mov rdi, qword ptr [rsp + 16]
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/core/src/ptr/mod.rs : 487
+		pub unsafe fn drop_in_place<T: ?Sized>(to_drop: *mut T) {
+	test rdi, rdi
+	je .LBB21_2
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/alloc.rs : 113
+		unsafe { __rust_dealloc(ptr, layout.size(), layout.align()) }
+	mov esi, 1
+	mov edx, 1
+	add rsp, 24
+	.cfi_def_cfa_offset 8
+	jmp qword ptr [rip + __rust_dealloc@GOTPCREL]
+
+.LBB21_2:
+	.cfi_def_cfa_offset 32
+		// /home/wink/.cargo/registry/src/github.com-1ecc6299db9ec823/iai-0.1.1/src/macros.rs : 43
+		}
+	add rsp, 24
+	.cfi_def_cfa_offset 8
+	ret
+.LBB21_3:
+	.cfi_def_cfa_offset 32
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/alloc/src/alloc.rs : 328
+		Err(_) => handle_alloc_error(layout),
+	mov edi, 1
+	mov esi, 1
+	call qword ptr [rip + alloc::alloc::handle_alloc_error@GOTPCREL]
+	ud2
+
+	.size	bench_iai::iai_wrappers::bench_iai_check_option_box_of_val_ret_val_option_box_neg1, .Lfunc_end21-bench_iai::iai_wrappers::bench_iai_check_option_box_of_val_ret_val_option_box_neg1

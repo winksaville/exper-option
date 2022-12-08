@@ -1,0 +1,24 @@
+.section .text.exper_option::check_option_val,"ax",@progbits
+	.globl	exper_option::check_option_val
+	.p2align	4, 0x90
+	.type	exper_option::check_option_val,@function
+exper_option::check_option_val:
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/lib.rs : 1
+		pub fn check_option_val(param: Option<u8>) -> isize {
+	.cfi_startproc
+		// /home/wink/prgs/rust/myrepos/exper-option/src/lib.rs : 2
+		if let Some(val) = param {
+	test sil, sil
+	movzx eax, sil
+	mov rcx, -1
+	cmovns rcx, rax
+	test edi, edi
+	mov rax, -2
+	cmovne rax, rcx
+
+		// /home/wink/prgs/rust/myrepos/exper-option/src/lib.rs : 11
+		}
+	ret
+
+	.size	exper_option::check_option_val, .Lfunc_end0-exper_option::check_option_val
