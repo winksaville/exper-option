@@ -1,0 +1,68 @@
+.section .text.exper_some::main,"ax",@progbits
+	.p2align	4, 0x90
+	.type	exper_some::main,@function
+exper_some::main:
+
+		// /home/wink/prgs/rust/myrepos/exper-some/src/main.rs : 3
+		fn main () {
+	.cfi_startproc
+	sub rsp, 72
+	.cfi_def_cfa_offset 80
+
+		// /home/wink/prgs/rust/myrepos/exper-some/src/main.rs : 4
+		let r = add(3, 3);
+	mov edi, 3
+	mov esi, 3
+	call qword ptr [rip + exper_some::add@GOTPCREL]
+
+	mov qword ptr [rsp], rax
+
+		// /home/wink/prgs/rust/myrepos/exper-some/src/main.rs : 5
+		assert_eq!(r, 6);
+	cmp rax, 6
+
+	jne .LBB7_2
+
+	mov rax, rsp
+
+		// /home/wink/prgs/rust/myrepos/exper-some/src/main.rs : 6
+		println!("{r}");
+	mov qword ptr [rsp + 8], rax
+	mov rax, qword ptr [rip + core::fmt::num::imp::<impl core::fmt::Display for usize>::fmt@GOTPCREL]
+	mov qword ptr [rsp + 16], rax
+
+		// /rustc/897e37553bba8b42751c67658967889d11ecd120/library/core/src/fmt/mod.rs : 398
+		Arguments { pieces, fmt: None, args }
+	lea rax, [rip + .L__unnamed_5]
+
+	mov qword ptr [rsp + 24], rax
+	mov qword ptr [rsp + 32], 2
+	mov qword ptr [rsp + 40], 0
+	lea rax, [rsp + 8]
+
+	mov qword ptr [rsp + 56], rax
+	mov qword ptr [rsp + 64], 1
+	lea rdi, [rsp + 24]
+
+		// /home/wink/prgs/rust/myrepos/exper-some/src/main.rs : 6
+		println!("{r}");
+	call qword ptr [rip + std::io::stdio::_print@GOTPCREL]
+
+		// /home/wink/prgs/rust/myrepos/exper-some/src/main.rs : 7
+		}
+	add rsp, 72
+	.cfi_def_cfa_offset 8
+	ret
+
+.LBB7_2:
+	.cfi_def_cfa_offset 80
+		// /home/wink/prgs/rust/myrepos/exper-some/src/main.rs : 5
+		assert_eq!(r, 6);
+	mov qword ptr [rsp + 24], 0
+
+	mov rdi, rsp
+	lea rsi, [rsp + 24]
+	call core::panicking::assert_failed
+	ud2
+
+	.size	exper_some::main, .Lfunc_end7-exper_some::main
